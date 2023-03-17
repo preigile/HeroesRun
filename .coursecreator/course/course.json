@@ -1,0 +1,88 @@
+{
+  "course_version" : 1,
+  "summary" : "This is an introductory JavaScript course.\n- The course will be most beneficial for beginner-level JavaScript learners.\n- The course covers core JavaScript features.\n- It contains hands-on examples of JavaScript code implementation and exercises to practice new skills.\n- The course is based on the author's personal experience in JavaScript development.",
+  "title" : "HeroesRun",
+  "programming_language" : "JavaScript",
+  "language" : "en",
+  "course_type" : "Marketplace",
+  "vendor" : {
+    "name" : "Irina Chichikova"
+  },
+  "items" : [
+    {
+      "id" : 330967826,
+      "title" : "lesson1",
+      "task_list" : [
+        {
+          "id" : 501232439,
+          "name" : "task1",
+          "files" : {
+            "task.js" : {
+              "name" : "task.js",
+              "placeholders" : [ ],
+              "is_visible" : true,
+              "text" : "Z1n4BOFShpvkJkMnKMTM0Hp2L3eZCm0hzOy1AHkKtO3mMakojYPl1K9yvFQ0QMMFj6429Y1tKuvcInOTT91ssUUIrYx1Mjb9ydAQlyLo2In4gy743SDYrdpJg8lwRSO+"
+            },
+            "test/test.js" : {
+              "name" : "test/test.js",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "JLzv/Xt662f9Wz+LNKyjxeQ+CUUMBal3E/FAQ4j37EdHyRa89SOiDTIXsb+N4Bkz8QtIRILCT68u6yVsnYVL+fPJRBJg2JHVd3SZe4lOgAGbDbgXbwNm4+yGYeu+vt9Y03iPJpURDRPxfiFp429zj/CGOccod9SRdbm0Et6Ueh3E9UgXxJ4lnpj3PgJYBN/sfR5o9TM++GJTkXXteFCF2v4BHcC/54fEWCUE14mQEqz6gBZgg1Rti5wzqX+M6qRY6bgrGXbKo9dqjwaUVdklGAL3JEsa490rJxuNzX+33or61gcXywGCbYGpW7TC3pNbSMn4Zldzjz/gVeprt1CC+uHhfO0gQSAdK3RdO9ysT8svXv6RMsPy6Y96grpeAOgeinNY8loYsgkPaVD9bjG5QWzn4skKmmC2wI2P5NtM6ESQ5FofDdEZGerfAAFwNhSCP5QIbo36rJUdtZK86rkStWgCkQJSls80zfw0TGZuhuEp06yXaCgR4IriWCbm3il0JwKrkX+VlWPHMrtBYiKBda5ZFfhCfOnmLgQ26NnwXM97zOTmD2dPiH82NWFpFu0zgYP4xVCZgrnOBE5xMzMxFMbGrwBEqRuAXxf6OsEGlgQ="
+            }
+          },
+          "description_text" : "\nThis is a task description file.\nIts content will be displayed to a learner\nin the **Task Description** window.\n\nIt supports both Markdown and HTML.\nTo toggle the format, you can rename **task.md**\nto **task.html**, or vice versa.\nThe default task description format can be changed\nin **Preferences | Tools | Education**,\nbut this will not affect any existing task description files.\n\nThe following features are available in\n**task.md/task.html** which are specific to the JetBrains Academy plugin:\n\n- Hints can be added anywhere in the task text.\n  Type \"hint\" and press Tab.\n  Hints should be added to an empty line in the task text.\n  In hints you can use both HTML and Markdown.\n<div class=\"hint\">\n\nText of your hint\n\n</div>\n\n- You may need to refer your learners to a particular lesson,\ntask, or file. To achieve this, you can use the in-course links.\nSpecify the path using the `[link_text](course://lesson1/task1/file1)` format.\n\n- You can insert shortcuts in the task description.\nWhile **task.html/task.md** is open, right-click anywhere\non the **Editor** tab and choose the **Insert shortcut** option\nfrom the context menu.\nFor example: &shortcut:FileStructurePopup;.\n\n- Insert the &percnt;`IDE_NAME`&percnt; macro,\nwhich will be replaced by the actual IDE name.\nFor example, **%IDE_NAME%**.\n\n- Insert PSI elements, by using links like\n`[element_description](psi_element://link.to.element)`.\nTo get such a link, right-click the class or method\nand select **Copy Reference**.\nThen press &shortcut:EditorPaste; to insert the link where appropriate.\nFor example, a [link to the \"contains\" method](psi_element://java.lang.String#contains).\n\n- You can add link to file using **full path** like this:\n  `[file_link](file://lesson1/task1/file.txt)`.",
+          "description_format" : "MD",
+          "task_type" : "edu"
+        }
+      ],
+      "type" : "lesson"
+    },
+    {
+      "id" : 1206272028,
+      "title" : "HeroesRun",
+      "task_list" : [
+        {
+          "id" : 512556043,
+          "name" : "stage1",
+          "files" : {
+            "test/test.js" : {
+              "name" : "test/test.js",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "sbMVHwz0BmSfvEHNy925evbr2WNgfVaMkFoNKwdgYpCM4+zH1RRaa1dKKeyP9Le3SQS6FGbZKe9cURUkiIuWO1KcESVVbqug2pqQpuQbwCbgTjKmiOZXodxOYIPssGqbJdPBCiR6k6bhLDp9ToLjiHnuzsxPC2g1Ze02PtIMBQ3KwodyZwsWMiWuTxWQk3o0KzvQ+/o9xX7ydmmGP/EhezOeORcB2UyRZ2fybykBhMcinWLFEVBUtqXLXl3417lJ2Vmgvwe9rh5DEbNbRCW30my+fdfB4hdN7vK6bZ+qEo8k/EbQi5kyyPqt7KZLW/SSNjGt4oiAzt+zpGoFLUDvlYaJnw6fDJu7xcNRJ+DU0g9Pw+9f22RCBS7/hgAqJAJs+og3ZvYpbltLS6yowCHpnRlQ7tTry5m65FV9pxUg89UYaV/75y9epWDkx5F+URN2qASlbPXKR83d2Eg5BmrIHSd2xIw7sBY3ZBmpmuizvqHYHBFr2LB2ukHN4IyBTXVYDsUNIfyg8Uwkhq7jffpT3dGw6imyC0CHXEcly1yEfYs7moZqoncsl7Qc1FTspRM1ckbYHMvlVTagktDBktw6sJ/EsKLc+iQjNbqknny/82zUfVI74rgFgJ9lCqX+2d7fD4Z3RX6DXPTHNbGatfwAL/aate+3T9s1wco2LiGCrlvFn4u5UzuII++gLhG8znSxQEplE8N6qoCMKG2Pm1Npgo3My5QRI7FoAeklqWGoYzVUDcPthA1sdFhu1w/FTVcwFe4okgdnDlkRLm5eAtYAbNq7NO1YqKgFk2A7omHY5ch/Scm+roao9ZK2H2WFnJBgKtqMy9SaH+yRKM4SBJjZyxVWGdUcqJtbaGYu4fmu6OGwViUHj9vj2xVKjKz29KnL+x/9KwN3BNTnx+9ssiXsg9IWRYqo1K7jOX7vsA+CnJQ5/1m3K/XIz9R1oyYrk7YCDNWR/7ix3HtlCK1vz9dnjirB5A1lCgCxxhrFfzyrOlKHU+M6wRhyAW3EbAyQbBVyuVFDX3EjYUaQPYsXnQtHHSnQcpeEVe8TVZRW8izMnQepffUTvDMPnuy2XKvg7TDrfcR/gYQ1GjioNzi1CmmYGK6XTrBIpefc1z2sjqY01AQJZCWcqHgTOQHTEiVP99Qn620fBzFudReXauc/Chr4WfYeQ9HYynN3zhmE4jRAumfrwdfmGz3LJUmQx+bpREifJzUuw0HmDsWBvgugc7TbdmgE4lnwEY6jpPZ9NM6sMgw6e+4qIfNPSa1Ei8LU6sJGZGOx/ZHxfiFWc4N8pXbAJCxh7cRXGHG0tsV/M7ju6nMk1y0O0MIw7K61qSn8qUbmMTiJm3ps07s2gN/IbIn19GsnmDEBH3Pwp20xvmEHosWhLLyaJP4j+qt1N7lJAO3yNM6924lSpX7i2s2lfjMNTcdUIxJH284BV/JpMw3UiBT0PucdhDzHFGcTGS43/v511a6HdJkeJ8EzZolKyKkdm9xWQ8vreQr5QX3P4zm2j3Jo8Hhqa8jZTF2Nx+WncyzF4N2rTbUr9KexkKsGGJVjt+KhHln2fT6Wi1RfPBTo84QDiwBK1IYwggmdijtTxV6UFw0SaQ0+viIXcIdPfAahQlLRAndEF1H3j3JDgEXhY8uzN5d7O89A9L1jFthKx8jzfBkVB3fTZsta90sGpoNgoIEYH/GlkwSS0o3Pnutwao0BClOOB9y7/fZafl7RUZEe4acjVkDuc7VcPYBvLI/d2Vgc/YPykRvtItGVI/11lKjhOIz95EgX3iJPkemfZ6GCnX1jR0+rBiWb7uqhsEzLZgVPct9nl9D1xDLzw3FEziRQ7HAYTAr42OTP28OPuaHv00MssgnPRBvBhJobWclR1DzUGld2xRtrxmG49w5iyOolnOnLzdecLnWTegM/lsHF2kMKPNIBdKq4hWmAfrlID/6S73CztodSQUJvm74MCIk="
+            },
+            "src/index.html" : {
+              "name" : "src/index.html",
+              "placeholders" : [ ],
+              "is_visible" : true,
+              "text" : "MDmo0BDmYPgVilQBNgV6/AzJY/kcaR2Qi9Oq/JsVGCtni3jdjtKi4OF89UtfVOuhalwB/4mpgfnw+unSYdGCLbDSHeYE/SRWOG32BL0kCWO0ORvt1KkO9kaJRnKNeDU1pRAMuH606qtCzxQUzJOcxAEW5ufOF8LKzvjDhjNj/jfKoORlBV0x7XfKlD47mt0+b9pdJSMoPvVFXWs6UWr5XYRw9qE8zvqVaOJxtpMVsUavE7+D/aBU9Q+sjAh35D0b7JQ3azUIi39/MWAb7yB8j6B0mEt/UJN3ogoWm5R7Csa3eriwAt2wTkUKEgFxe5lHRKGD+9D1jYQZNyWbkq9Q/ndfdp8GutBkj1d1B4tEip23lolVE6gH2ANu80owft53bza7Ueyn4rTsVI4pZJReigWcPOWZOl4xurkL9SrGif7PDQNJWA5+eEqed431lBbJGIyWIg8Ff+4DuOBqll9F8+eQRGy7ck/WXdyAyS2iylY1wJYwG++go1HTwuz0eQT7uadTt5sX6b7M9uE0h062jExbGt7bkriURUUbgVTSIfqkqEu3V6jJBsKbyKtffubePvUmzqP3prxfYkrCaLdDEoKMLbx3e4EefuDJd34tCrxSBGe9nn51QxSAm8kNm+/GDT6tNDNrq8odGhGQWI8/baNv8vjF1EPJn3aqsTPFUouV6vZRWpNP/HMSAt0dYKq8g2SCsqPQN/9oHO92sEicnY5nGsA94RGRIattxiliiUfH6TeuTbSjpJEDCmfpZhM4bKOCPIF6Ism5aq1XMT+72SNuXC16BeQW6j6inG4xZ/p8XgXGm8t1RCeMeSwlJodQ80zpG2lRtdK9NNGIZfJeOcwJ1mh5ZFa+9ZIZn0CgzkIyZewh0+3RAHZHIosqlTMVmyAhyqoluEj33xExa1ObyDNgs+KZiabTbt9Z2Zc5SkpXI471edm9Va0oGh21FkK3elSV3dowpzeEW9szP2bRSVuFdr2ReqINbtKFqF/4bI9MDqQEhPs6/5hqXwzTlHCH44K6f/Twra/TJmO93hvh6jeZkkY7aJgaWm57r/GDPQkYexvje9wwVLSgNsos9criYRv8hbg+lMKdlJVqVDP8uFZQZ20os06y+uTwF6sej3Dpbia4B8+7ktP0ApJ83L6eYrXDEdk+RHdh4F0/Pc+OybOIBR8MIWC98Kk3czP5iQlH3MbpWxhY/U5J4Xiaze4b"
+            }
+          },
+          "description_text" : "\nThis is a task description file.\nIts content will be displayed to a learner\nin the **Task Description** window.\n\nIt supports both Markdown and HTML.\nTo toggle the format, you can rename **task.md**\nto **task.html**, or vice versa.\nThe default task description format can be changed\nin **Preferences | Tools | Education**,\nbut this will not affect any existing task description files.\n\nThe following features are available in\n**task.md/task.html** which are specific to the JetBrains Academy plugin:\n\n- Hints can be added anywhere in the task text.\n  Type \"hint\" and press Tab.\n  Hints should be added to an empty line in the task text.\n  In hints you can use both HTML and Markdown.\n<div class=\"hint\">\n\nText of your hint\n\n</div>\n\n- You may need to refer your learners to a particular lesson,\ntask, or file. To achieve this, you can use the in-course links.\nSpecify the path using the `[link_text](course://lesson1/task1/file1)` format.\n\n- You can insert shortcuts in the task description.\nWhile **task.html/task.md** is open, right-click anywhere\non the **Editor** tab and choose the **Insert shortcut** option\nfrom the context menu.\nFor example: &shortcut:FileStructurePopup;.\n\n- Insert the &percnt;`IDE_NAME`&percnt; macro,\nwhich will be replaced by the actual IDE name.\nFor example, **%IDE_NAME%**.\n\n- Insert PSI elements, by using links like\n`[element_description](psi_element://link.to.element)`.\nTo get such a link, right-click the class or method\nand select **Copy Reference**.\nThen press &shortcut:EditorPaste; to insert the link where appropriate.\nFor example, a [link to the \"contains\" method](psi_element://java.lang.String#contains).\n\n- You can add link to file using **full path** like this:\n  `[file_link](file://lesson1/task1/file.txt)`.",
+          "description_format" : "MD",
+          "task_type" : "edu"
+        }
+      ],
+      "type" : "lesson"
+    }
+  ],
+  "additional_files" : [
+    {
+      "name" : "index.html",
+      "is_visible" : true,
+      "text" : "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"
+    },
+    {
+      "name" : "styles.css",
+      "is_visible" : true,
+      "text" : "UyE1Q2clyG2C4SfrdlQzdP7xjikFHFweNo9WSKlToISYVNCKkd5JLQrS3Q55hKZ4RJ0AgalZ0sXKMwMn9/2/G4qurRpvTmdXd3Pwsz1zsaLGjaU/lXMb04xSTud5NYloixJo6RB3OjWydxWN9PWvLcV04jnGriNZ9NHZFo68dj5mGomgXWFlUj8JXVaaIQtRjTHLgDBLVm7UCIwgQp8kFwWzBEdSSGWsUzd6T89VpSyIQnDJdwwtYsQ/di7fTLMhhmzuqqe+yhhfSwMXzF3wLP4a7toT90QrSXrcJzXan9IGCHdKK549rexjuAjKngcDqesrmEV8+N59N9fabY92C3PEddskEJcveYJ+YkQTUwCTTFqCjJZ36ieI+Hhi0l43GrYEpyag7ltnW175TCYECDO+GLld0v4WnUjzkAuv6ZLoEJItw9b8WM8plT27bd1cTiX7RiWt6SnmQ1MnGLpGq42JvVFSRHNYzVDYT+4BGFuNfmZRkZplfi05tCIQEmZOWWYTft0gfOxgQAAy8GznlezdyIUkJ4SnIvaZBH+Zj0olY/aBXndZmLoCObX4K4u9NbOFgPisgaNx/tQ52/9PanjKEd6jR3mXCk3s3CfoaylnttTZkBF9qp2356DrIHkSvC1ljKNveBaAp2ZWxKePzdMeosfSPog5Ta025aKG4vTaQinAd0gOxn58J+PkA9inRbpFi+PbGMqHDOiEF9Jujm5ru6x0F257djHTpEz70cWJ8jKN2DcGEhrbrwADAfXQW0bKGX7Yb8+EwfyPAcgRFWNWAjzp1zx3CRqylNRSuUdCF2Tblh9kKOaXtYEflald5IrJ/Yk3SyLMlHXqPyNaL5ksZDkRJg0da47FO5ygS0E+CeOTyeu0sW+VaOP678SsekCz7TwRKosBS6BdAb2ORPyQzjIgjzBWu+FXs0m8NR+kNjMv5rlEMkFUNEZSNzhHmUSTNtX+ail/4kvmM76cxbR59sqA/cPqB9/9d1GIg9ajsr5QqXMqBznlvv2e8mxvrpE18ZiD0EEg0p1jZSs35gIDJT3yssab+O+C4dQuIpATTSwYAC7IamI3eqTBIEM6"
+    },
+    {
+      "name" : "package.json",
+      "is_visible" : true,
+      "text" : "1A/+fX2tCmHjwdMhEbt/hVy/HmVcCf5LRagqI99nwLmkonCLosvZ9u0ENJU2qxV22RL7jGpi/gYBqPfDxoO2jaQUeqTAC9XT+bX+gPeGd7J4z1La1r9eRKfBzMOor9SVUKoiskSfWmOl+5Zh+bV1ykTyPOsr1cux14iFavXGBfIBi7pl2ey02hOXn7iaW9itx6wOo8WkbVKGCpHOPT0IWoFXh0nxkE5AOtChNNIUE5/rsCKqz39yEifsUPNadYkDqFLZKRGAxNZc9BP7+69A2Io3NowgPHT22epn7/ruLwz8ziBYN30Lq9vsQD4m0+HM"
+    }
+  ],
+  "version" : 15,
+  "edu_plugin_version" : "2023.2-2022.3-431"
+}
