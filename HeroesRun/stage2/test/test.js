@@ -17,23 +17,23 @@ class Test extends StageTest {
               wrong('Check that the iframes are displayed one after the other, with no space between them')
         }),
 
-        this.page.execute(async () => {
-            await this.page.setViewport({width: 1200, height: 740});
+        this.page.execute(() => {
+            const windowWidth = `${window.innerWidth}px`;
             const iframeContainer = document.getElementsByClassName('iframe-container');
             const youtubeIframeContainerStyle = window.getComputedStyle(iframeContainer[0]);
             const weatherIframeContainerStyle = window.getComputedStyle(iframeContainer[1]);
 
-            return youtubeIframeContainerStyle.width === '1200px' && weatherIframeContainerStyle.width === '1200px' ?
+            return youtubeIframeContainerStyle.width === windowWidth && weatherIframeContainerStyle.width === windowWidth ?
               correct() :
               wrong('Width of both iframes should be set to 100% of the screen width')
         }),
 
-        this.page.execute(async () => {
-            await this.page.setViewport({width: 1200, height: 1000});
+        this.page.execute(() => {
+            const windowHeight = window.innerHeight;
             const youtubeIframe = document.getElementsByTagName('iframe')[1];
-            const youtubeIframeStyle = window.getComputedStyle(youtubeIframe);
+            const youtubeIframeHeight = Number(window.getComputedStyle(youtubeIframe).height.replace('px', ''));
 
-            return youtubeIframeStyle.height === '800px' ?
+            return Math.round(((youtubeIframeHeight * 100) / windowHeight)) === 80 ?
               correct() :
               wrong('Be sure the height of the YouTube iframe is 80% of screen height')
         }),
