@@ -1,0 +1,6 @@
+type: edu
+files:
+- name: test/test.js
+  visible: false
+- name: src/index.html
+  visible: true
