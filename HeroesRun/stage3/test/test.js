@@ -8,10 +8,10 @@ class Test extends StageTest {
 
     tests = [
         this.page.execute(async () => {
-            const distanceContainer = document.querySelector('.distance-container h2');
-            const distanceContainerTitle = distanceContainer.textContent;
+            const distanceTitle = document.querySelector('.distance-container h2');
+            const distanceTitleContent = distanceTitle.textContent;
 
-            return distanceContainerTitle === 'Running Distances' ?
+            return distanceTitleContent === 'Running Distances' ?
               correct() :
               wrong('This component should have a title "Running Distances"')
         }),
