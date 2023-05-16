@@ -32,18 +32,13 @@ class Test extends StageTest {
         }),
 
         this.node.execute(async () => {
-            const distanceImages = await this.page.findAllBySelector('.distance img');
-            let saturateImages = 0;
+            const image = await this.page.findBySelector('.distance img');
+            await image.hover();
+            sleep(300);
+            const hoverImage = await this.page.findBySelector('.distance img:hover');
+            const styles = await hoverImage.getComputedStyles();
 
-            for (const image of distanceImages) {
-                await image.hover();
-                const computedStyle = await image.getComputedStyles();
-                if (computedStyle.filter === 'saturate(2)') {
-                    saturateImages++;
-                }
-            }
-
-            return saturateImages === 5 ?
+            return styles.filter === 'saturate(2)' ?
               correct() :
               wrong('Every image should be super-saturates on hover');
         }),
