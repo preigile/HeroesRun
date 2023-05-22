@@ -7,8 +7,9 @@ class Test extends StageTest {
   page = this.getPage(pagePath)
 
   tests = [
-    this.page.execute(() => {
-      const iframes = document.getElementsByTagName('iframe');
+    // Test 1 - check iframes count
+    this.node.execute(async () => {
+      const iframes = await this.page.findAllBySelector('iframe');
 
       if (iframes.length === 0) {
         return wrong(`Cannot find iframes`);
@@ -16,31 +17,47 @@ class Test extends StageTest {
         return correct();
       }
 
-      return wrong('Your page must contain two iframes')
+      return wrong('Your page must contain two iframes');
     }),
 
+    // Test 2 - check .iframe-container is existing
     this.page.execute(() => {
-      const iframe = document.getElementsByTagName('iframe')[0];
+      const youtubeIframe = document.querySelector('.iframe-container iframe[src*="youtube"]');
+      const weatherIframe = document.querySelector('.iframe-container iframe[src*="meteoblue"]');
+      const youtubeContainer = youtubeIframe?.parentElement;
+      const weatherContainer = weatherIframe?.parentElement;
 
-      return iframe.src.startsWith('https://www.youtube.com/embed/') ?
+      return youtubeContainer && youtubeContainer.classList.contains('iframe-container')
+      && weatherContainer && weatherContainer.classList.contains('iframe-container') ?
         correct() :
-        wrong('The first iframe must contain a link to youtube')
+        wrong('Each iframe should be in a div with the `.iframe-container` class');
     }),
 
+    // Test 3 - check first iframe contains youtube
     this.page.execute(() => {
-      const iframe = document.getElementsByTagName('iframe')[1];
+      const iframes = document.getElementsByTagName('iframe');
 
-      return iframe.src.startsWith('https://www.meteoblue.com/en/weather/widget/daily/london_united-kingdom_') ?
+      return iframes && iframes[0]?.src.startsWith('https://www.youtube.com/embed/') ?
         correct() :
-        wrong('Please make sure that the weather widget is displayed for London')
+        wrong('The first iframe must contain a link to youtube');
     }),
 
+    // Test 3 - check second iframe contains meteoblue
     this.page.execute(() => {
-      const iframe = document.getElementsByTagName('iframe')[1];
+      const iframes = document.getElementsByTagName('iframe');
 
-      return iframe.src.includes('days=7') ?
+      return iframes && iframes[1]?.src.startsWith('https://www.meteoblue.com/en/weather/widget/daily/london_united-kingdom_') ?
         correct() :
-        wrong('Please make sure that the weather widget is displayed for 7 days')
+        wrong('Please make sure that the weather widget is displayed for London');
+    }),
+
+    // Test 3 - check second iframe show weather for 7 days
+    this.page.execute(() => {
+      const iframes = document.getElementsByTagName('iframe');
+
+      return iframes && iframes[1]?.src.includes('days=7') ?
+        correct() :
+        wrong('Please make sure that the weather widget is displayed for 7 days');
     }),
   ]
 }
