@@ -4,51 +4,72 @@ const pagePath = path.join(import.meta.url, '../../src/index.html');
 import {StageTest, correct, wrong} from 'hs-test-web';
 
 class Test extends StageTest {
-    page = this.getPage(pagePath);
+  page = this.getPage(pagePath);
 
-    tests = [
-        this.page.execute(() => {
-            const iframeContainer = document.getElementsByClassName('iframe-container');
-            const youtubeIframeContainerStyle = window.getComputedStyle(iframeContainer[0]);
-            const weatherIframeContainerStyle = window.getComputedStyle(iframeContainer[1]);
+  tests = [
+    // Test 1 - check iframes still exist
+    this.page.execute(() => {
+      const youtubeIframe = document.querySelector('.iframe-container iframe[src*="youtube"]');
+      const weatherIframe = document.querySelector('.iframe-container iframe[src*="meteoblue"]');
 
-            return youtubeIframeContainerStyle.margin === '0px' && weatherIframeContainerStyle.margin === '0px' ?
-              correct() :
-              wrong('Check that the iframes are displayed one after the other, with no space between them')
-        }),
+      return youtubeIframe && weatherIframe ?
+        correct() :
+        wrong('The page must have iframes with content from YouTube and the weather widget. Each of these iframes must have a parent div with the class .iframe-container');
+    }),
 
-        this.page.execute(() => {
-            const windowWidth = `${window.innerWidth}px`;
-            const iframeContainer = document.getElementsByClassName('iframe-container');
-            const youtubeIframeContainerStyle = window.getComputedStyle(iframeContainer[0]);
-            const weatherIframeContainerStyle = window.getComputedStyle(iframeContainer[1]);
+    // Test 2 - check that there are no indents
+    this.page.execute(() => {
+      const youtubeIframe = document.querySelector('.iframe-container iframe[src*="youtube"]');
+      const weatherIframe = document.querySelector('.iframe-container iframe[src*="meteoblue"]');
+      const bodyStyles = window.getComputedStyle(document.body);
+      const youtubeIframeStyles = window.getComputedStyle(youtubeIframe);
+      const weatherIframeStyles = window.getComputedStyle(weatherIframe);
 
-            return youtubeIframeContainerStyle.width === windowWidth && weatherIframeContainerStyle.width === windowWidth ?
-              correct() :
-              wrong('Width of both iframes should be set to 100% of the screen width')
-        }),
+      return bodyStyles?.margin === '0px' && bodyStyles?.padding === '0px'
+      && youtubeIframeStyles?.margin === '0px' && youtubeIframeStyles?.padding === '0px'
+      && weatherIframeStyles?.margin === '0px' && weatherIframeStyles?.padding === '0px'?
+        correct() :
+        wrong('Should remove any margin and padding from the body and iframes');
+    }),
 
-        this.page.execute(() => {
-            const windowHeight = window.innerHeight;
-            const youtubeIframe = document.getElementsByTagName('iframe')[1];
-            const youtubeIframeHeight = Number(window.getComputedStyle(youtubeIframe).height.replace('px', ''));
+    // Test 3 - check that iframes have 100% width
+    this.page.execute(() => {
+      const windowWidth = `${window.innerWidth}px`;
+      const iframeContainer = document.getElementsByClassName('iframe-container');
+      if (!iframeContainer || iframeContainer.length !== 2) {
+        return wrong('Make sure there are still 2 iframe-containers on the page');
+      }
+      const youtubeIframeContainerStyle = window.getComputedStyle(iframeContainer[0]);
+      const weatherIframeContainerStyle = window.getComputedStyle(iframeContainer[1]);
 
-            return Math.round(((youtubeIframeHeight * 100) / windowHeight)) === 80 ?
-              correct() :
-              wrong('Be sure the height of the YouTube iframe is 80% of screen height')
-        }),
+      return youtubeIframeContainerStyle.width === windowWidth && weatherIframeContainerStyle.width === windowWidth ?
+        correct() :
+        wrong('Width of both iframes should be set to 100% of the screen width');
+    }),
 
-        this.page.execute(async () => {
-            const youtubeIframe = document.getElementsByTagName('iframe')[0];
+    // Test 4 - check youtube iframe height
+    this.page.execute(() => {
+      const windowHeight = window.innerHeight;
+      const youtubeIframe = document.querySelector('.iframe-container iframe[src*="youtube"]');
+      const youtubeIframeHeight = Number(window.getComputedStyle(youtubeIframe).height.replace('px', ''));
 
-            return !youtubeIframe.src.includes('controls=1') ?
-              correct() :
-              wrong('Hide the controls for YouTube iframe')
-        }),
-    ]
+      return Math.round(((youtubeIframeHeight * 100) / windowHeight)) === 80 ?
+        correct() :
+        wrong('Be sure the height of the YouTube iframe is 80% of screen height');
+    }),
+
+    // Test 5 - check youtube controls is hidden
+    this.page.execute(async () => {
+      const youtubeIframe = document.querySelector('.iframe-container iframe[src*="youtube"]');
+
+      return !youtubeIframe.src.includes('controls=1') ?
+        correct() :
+        wrong('Hide the controls for YouTube iframe');
+    }),
+  ]
 }
 
 it("Test stage", async () => {
-      await new Test().runTests()
+    await new Test().runTests()
   }
 ).timeout(30000);
