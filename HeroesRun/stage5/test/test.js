@@ -195,9 +195,9 @@ class Test extends StageTest {
       const mapTitle = document.querySelector('.map-container h2');
       const mapTitleContent = mapTitle?.textContent;
 
-      return mapTitleContent === 'See you at the Big Ben!' ?
+      return mapTitleContent === 'See you at Big Ben!' ?
         correct() :
-        wrong('The map should have title with text See you at the Big Ben!')
+        wrong('The map should have title with text See you at Big Ben!')
     }),
 
     // Test 17 - check iframe with map
