@@ -62,7 +62,7 @@ class Test extends StageTest {
     this.page.execute(async () => {
       const youtubeIframe = document.querySelector('.iframe-container iframe[src*="youtube"]');
 
-      return !youtubeIframe.src.includes('controls=1') ?
+      return youtubeIframe.src.includes('controls=0') ?
         correct() :
         wrong('Hide the controls for YouTube iframe');
     }),

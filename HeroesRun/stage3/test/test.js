@@ -27,7 +27,7 @@ class Test extends StageTest {
 
       return bodyStyles?.margin === '0px' && bodyStyles?.padding === '0px'
       && youtubeIframeStyles?.margin === '0px' && youtubeIframeStyles?.padding === '0px'
-      && weatherIframeStyles?.margin === '0px' && weatherIframeStyles?.padding === '0px'?
+      && weatherIframeStyles?.margin === '0px' && weatherIframeStyles?.padding === '0px' ?
         correct() :
         wrong('Should remove any margin and padding from the body and iframes');
     }),
@@ -62,16 +62,19 @@ class Test extends StageTest {
     this.page.execute(async () => {
       const youtubeIframe = document.querySelector('.iframe-container iframe[src*="youtube"]');
 
-      return !youtubeIframe.src.includes('controls=1') ?
+      return youtubeIframe.src.includes('controls=0') ?
         correct() :
         wrong('Hide the controls for YouTube iframe');
     }),
 
     // Test 6 - check div with the class distance-container
     this.page.execute(async () => {
+      const iframeContainers = document.querySelectorAll('.iframe-container');
       const distanceContainer = document.querySelector('.distance-container');
 
-      return distanceContainer ?
+      return distanceContainer
+      && iframeContainers.length === 2
+      && iframeContainers[1].nextElementSibling?.classList.contains('distance-container') ?
         correct() :
         wrong('Should have a div with the class distance-container below the iframes"')
     }),
@@ -103,9 +106,12 @@ class Test extends StageTest {
       let count = 0;
 
       for (const distance of distances) {
-        if (distance.querySelector('h2').textContent.length > 0
-          && distance.querySelector('img').getAttribute('src')
-          && distance.querySelector('p').textContent.length > 0
+        const title = distance.querySelector('h2');
+        const image = distance.querySelector('img');
+        const text = distance.querySelector('p');
+        if (title && title.textContent.length > 0
+          && image && image.getAttribute('src')
+          && text && text.textContent.length > 0
         ) {
           ++count
         }
@@ -113,7 +119,7 @@ class Test extends StageTest {
 
       return count === 5 ?
         correct() :
-        wrong('Be sure each distance have a title, image, and description')
+        wrong('Be sure each distance have a title, image with src, and description')
     }),
   ]
 }

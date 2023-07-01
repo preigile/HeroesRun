@@ -20,20 +20,7 @@ class Test extends StageTest {
       return wrong('Your page must contain two iframes');
     }),
 
-    // Test 2 - check .iframe-container is existing
-    this.page.execute(() => {
-      const youtubeIframe = document.querySelector('.iframe-container iframe[src*="youtube"]');
-      const weatherIframe = document.querySelector('.iframe-container iframe[src*="meteoblue"]');
-      const youtubeContainer = youtubeIframe?.parentElement;
-      const weatherContainer = weatherIframe?.parentElement;
-
-      return youtubeContainer && youtubeContainer.classList.contains('iframe-container')
-      && weatherContainer && weatherContainer.classList.contains('iframe-container') ?
-        correct() :
-        wrong('Each iframe should be in a div with the `.iframe-container` class');
-    }),
-
-    // Test 3 - check first iframe contains youtube
+    // Test 2 - check first iframe contains youtube
     this.page.execute(() => {
       const iframes = document.getElementsByTagName('iframe');
 
@@ -51,13 +38,26 @@ class Test extends StageTest {
         wrong('Please make sure that the weather widget is displayed for London');
     }),
 
-    // Test 3 - check second iframe show weather for 7 days
+    // Test 4 - check second iframe show weather for 7 days
     this.page.execute(() => {
       const iframes = document.getElementsByTagName('iframe');
 
       return iframes && iframes[1]?.src.includes('days=7') ?
         correct() :
         wrong('Please make sure that the weather widget is displayed for 7 days');
+    }),
+
+    // Test 5 - check .iframe-container is existing
+    this.page.execute(() => {
+      const youtubeIframe = document.querySelector('.iframe-container iframe[src*="youtube"]');
+      const weatherIframe = document.querySelector('.iframe-container iframe[src*="meteoblue"]');
+      const youtubeContainer = youtubeIframe?.parentElement;
+      const weatherContainer = weatherIframe?.parentElement;
+
+      return youtubeContainer && youtubeContainer.classList.contains('iframe-container')
+      && weatherContainer && weatherContainer.classList.contains('iframe-container') ?
+        correct() :
+        wrong('Each iframe should be in a div with the `.iframe-container` class');
     }),
   ]
 }

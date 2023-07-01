@@ -32,7 +32,7 @@
         color: white;
         text-align: center;
         position: absolute;
-        top: 25%;
+        top: 120px;
         left: 50%;
         transform: translate(-50%, -50%);
       }
@@ -70,39 +70,30 @@
       .distances {
         padding: 0;
       }
-
       .distance {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: space-between;
+        content: "";
+        display: table;
+        clear: both;
       }
-
-      .distance:nth-child(even) {
-        flex-direction: row;
+      .distance img {
+        max-width: 400px;
+        margin: 0 50px 0 0;
       }
-
+      .distance:nth-child(even) img {
+        float: right;
+        margin-left: 50px;
+      }
+      .distance:nth-child(odd) img {
+        float: left;
+        margin-right: 50px;
+      }
       .distance .distance-image {
         max-width: 400px;
         margin: 0 50px 0 0;
         filter: saturate(100%);
       }
-
       .distance .distance-image:hover {
         filter: saturate(200%);
-      }
-
-      .distance:nth-child(even) img {
-        margin: 0 0 0 50px;
-      }
-
-      .distance p {
-        max-width: 600px;
-      }
-
-      .distance-info {
-        flex-basis: 100%;
-        width: 100%;
       }
 
       .map-container iframe {
@@ -134,42 +125,36 @@
     <h2 class="distances-title">Running Distances</h2>
     <ul class="distances">
         <li class="distance">
+            <img class="distance-image" src="https://strengthrunning.com/wp-content/uploads/2017/04/Fun-Workouts.jpg" alt="Fun Run">
             <div class="distance-info">
                 <h2>1km: Fun Run</h2>
                 <p>This short and sweet 1km run is perfect for beginners or those who just want to have a bit of fun.
-                    Whether you're looking to kickstart your fitness journey or simply enjoy a leisurely jog in the
-                    great outdoors,
+                    Whether you're looking to kickstart your fitness journey or simply enjoy a leisurely jog in the great outdoors,
                     this distance is a great way to get started.
                 </p>
             </div>
-            <img class="distance-image" src="https://strengthrunning.com/wp-content/uploads/2017/04/Fun-Workouts.jpg"
-                 alt="Fun Run">
         </li>
         <li class="distance">
+            <img class="distance-image" src="https://marathonhandbook.com/wp-content/uploads/2022/02/Whats-A-Good-5k-Time-.webp" alt="5K Race">
             <div class="distance-info">
                 <h2>5km Run</h2>
-                <p>With a distance of 5km, this run is a great challenge for beginner runners or those who want to
-                    improve their fitness.
-                    Whether you're looking to increase your speed or endurance, this distance will test your limits and
-                    help you reach your goals.
+                <p>With a distance of 5km, this run is a great challenge for beginner runners or those who want to improve their fitness.
+                    Whether you're looking to increase your speed or endurance, this distance will test your limits and help you reach your goals.
                 </p>
             </div>
-            <img class="distance-image"
-                 src="https://marathonhandbook.com/wp-content/uploads/2022/02/Whats-A-Good-5k-Time-.webp" alt="5K Race">
         </li>
         <li class="distance">
+            <img class="distance-image" src="https://strengthrunning.com/wp-content/uploads/2017/04/Fun-Workouts.jpg" alt="10K Race">
             <div class="distance-info">
                 <h2>10km Run</h2>
-                <p>The 10km run is a great intermediate distance that offers a challenge to runners who have already
-                    tackled shorter races.
+                <p>The 10km run is a great intermediate distance that offers a challenge to runners who have already tackled shorter races.
                     With a mix of speed and endurance, this distance requires a bit more training and dedication,
                     but the sense of accomplishment you'll feel at the finish line will be well worth it.
                 </p>
             </div>
-            <img class="distance-image" src="https://strengthrunning.com/wp-content/uploads/2017/04/Fun-Workouts.jpg"
-                 alt="10K Race">
         </li>
         <li class="distance">
+            <img class="distance-image" src="https://strengthrunning.com/wp-content/uploads/2017/04/Fun-Workouts.jpg" alt="Half Marathon">
             <div class="distance-info">
                 <h2>21km Half Marathon</h2>
                 <p>The half marathon is a major milestone for runners and requires dedicated training to complete.
@@ -177,21 +162,16 @@
                     but the feeling of crossing the finish line is an experience like no other.
                 </p>
             </div>
-            <img class="distance-image" src="https://strengthrunning.com/wp-content/uploads/2017/04/Fun-Workouts.jpg"
-                 alt="Half Marathon">
         </li>
         <li class="distance">
+            <img class="distance-image" src="https://strengthrunning.com/wp-content/uploads/2017/04/Fun-Workouts.jpg" alt="Full Marathon">
             <div class="distance-info">
                 <h2>42km Full Marathon</h2>
-                <p>The full marathon is the ultimate challenge for runners and requires months of intense training to
-                    complete.
-                    With a distance of 42km, this run is not for the faint of heart, but for those who are willing to
-                    put in the time and effort,
+                <p>The full marathon is the ultimate challenge for runners and requires months of intense training to complete.
+                    With a distance of 42km, this run is not for the faint of heart, but for those who are willing to put in the time and effort,
                     the feeling of crossing the finish line is a truly unforgettable experience.
                 </p>
             </div>
-            <img class="distance-image" src="https://strengthrunning.com/wp-content/uploads/2017/04/Fun-Workouts.jpg"
-                 alt="Full Marathon">
         </li>
     </ul>
 </div>
