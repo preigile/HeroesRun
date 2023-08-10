@@ -162,9 +162,9 @@ class Test extends StageTest {
       const videoTitle = videoOverlay?.querySelector('h1');
       const styles = videoTitle && window.getComputedStyle(videoTitle);
 
-      return videoTitle && styles.fontSize === '73px' && styles.color === 'rgb(255, 255, 255)' && styles.top === '120px' ?
+      return videoTitle && styles.fontSize === '73px' && styles.color === 'rgb(255, 255, 255)' && styles.top === '150px' ?
         correct() :
-        wrong('Should have a title in the video block with the specified styles');
+        wrong('The video block should have a header with a fontSize of 73px, white colour and a top indent of 150px');
     }),
 
     // Test 13 - check video button styles
@@ -181,7 +181,7 @@ class Test extends StageTest {
       && styles.backgroundColor === 'rgba(0, 0, 0, 0)'
       && styles.fontSize === '24px' ?
         correct() :
-        wrong('Should have a button in the video block with the specified styles');
+        wrong('The button should have the following styles: padding 5px 10px, white border (2px), white colour, transparent background, text "Join us!" with font size 24px');
     }),
 
     // Test 14 - check list of distances maximum width
